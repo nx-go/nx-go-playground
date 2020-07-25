@@ -1,9 +1,9 @@
 package main
 
 import (
-  "fmt"
-  "log"
-  "net/http"
+	"fmt"
+	"log"
+	"net/http"
 )
 
 func Hello(name string) string {
@@ -11,13 +11,11 @@ func Hello(name string) string {
 	return result
 }
 
-
 func handler(w http.ResponseWriter, r *http.Request) {
-  fmt.Fprintf(w, Hello(r.URL.Path[1:]))
+	fmt.Fprintf(w, Hello(r.URL.Path[1:]))
 }
 
 func main() {
-  http.HandleFunc("/", handler)
-  log.Fatal(http.ListenAndServe("localhost:8080", nil))
+	http.HandleFunc("/", handler)
+	log.Fatal(http.ListenAndServe("localhost:8080", nil))
 }
-

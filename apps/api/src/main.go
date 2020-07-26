@@ -30,5 +30,6 @@ func main() {
 	}
 
 	http.HandleFunc("/", handler)
+	fmt.Printf("Listening on port %s\n", port)
 	log.Fatal(http.ListenAndServe("localhost:"+port, nil))
 }

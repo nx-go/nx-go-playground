@@ -6,6 +6,7 @@ import (
 	"net/http"
 )
 
+// Hello returns hello with the name you pass in :)
 func Hello(name string) string {
 	result := "Hello " + name
 	return result

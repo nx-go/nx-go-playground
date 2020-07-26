@@ -9,11 +9,16 @@ import (
 // Hello returns hello with the name you pass in :)
 func Hello(name string) string {
 	result := "Hello " + name
+	fmt.Println(result)
 	return result
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, Hello(r.URL.Path[1:]))
+	var input = "World"
+	if len(r.URL.Path) > 1 {
+		input = r.URL.Path[1:]
+	}
+	fmt.Println(w, Hello(input))
 }
 
 func main() {

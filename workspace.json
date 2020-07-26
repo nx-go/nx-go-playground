@@ -16,6 +16,7 @@
         "serve": {
           "builder": "@nx-go/nx-go:serve",
           "options": {
+            "cmd": "gow",
             "main": "apps/api/src/main.go"
           }
         },

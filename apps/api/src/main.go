@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 )
 
 // Hello returns hello with the name you pass in :)
@@ -22,6 +23,12 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	var defaultPort = "8080"
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = defaultPort
+	}
+
 	http.HandleFunc("/", handler)
-	log.Fatal(http.ListenAndServe("localhost:8080", nil))
+	log.Fatal(http.ListenAndServe("localhost:"+port, nil))
 }

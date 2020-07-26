@@ -109,10 +109,10 @@
     yargs "^11.0.0"
     yargs-parser "10.0.0"
 
-"@nx-go/nx-go@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@nx-go/nx-go/-/nx-go-1.1.0.tgz#df29e613581a0d145414b3c7fc85e68d0af022c8"
-  integrity sha512-MBS2X5AYTCvgLtdcXvfbf325/Eym4/3p2dXWteSBHOqzEqMIQQ13XFT7UlNdiULYXzeg1zqJwWQPLJ0EUvxFeQ==
+"@nx-go/nx-go@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@nx-go/nx-go/-/nx-go-1.2.3.tgz#f887e99c59b7b76a0c06b0c3cdb24cfba97d3cb2"
+  integrity sha512-+BlF7bD/LWd5172XBFo2s02ibmrRkfHWQkK96R4x0im8MXipUZroEPXeG+rFAXs7h7NSsCe1SMQmIlRIBW1DiA==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"

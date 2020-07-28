@@ -19,17 +19,25 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	if len(r.URL.Path) > 1 {
 		input = r.URL.Path[1:]
 	}
-	fmt.Println(w, Hello(input))
+	fmt.Fprintf(w, "%s\n", Hello(input))
 }
 
 func main() {
-	var defaultPort = "8080"
+	var defaultHost = "localhost"
+	host := os.Getenv("HOST")
+	if host == "" {
+		host = defaultHost
+	}
+
+	var defaultPort = "3000"
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = defaultPort
 	}
 
+	address := fmt.Sprintf("%s:%s", host, port)
+
 	http.HandleFunc("/", handler)
-	fmt.Printf("Listening on port %s\n", port)
-	log.Fatal(http.ListenAndServe("localhost:"+port, nil))
+	fmt.Printf("Listening on port %s\n", address)
+	log.Fatal(http.ListenAndServe(address, nil))
 }

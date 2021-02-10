@@ -4,94 +4,29 @@
     "api": {
       "projectType": "application",
       "root": "apps/api",
-      "sourceRoot": "apps/api/src",
+      "sourceRoot": "apps/api",
       "architect": {
         "build": {
           "builder": "@nx-go/nx-go:build",
           "options": {
             "outputPath": "dist/apps/api",
-            "main": "apps/api/src/main.go"
+            "main": "apps/api/main.go"
           }
         },
         "serve": {
           "builder": "@nx-go/nx-go:serve",
           "options": {
-            "cmd": "gow",
-            "main": "apps/api/src/main.go"
+            "main": "apps/api/main.go"
           }
         },
         "test": {
-          "builder": "@nx-go/nx-go:test",
-          "options": {
-            "main": "apps/api/src/main_test.go"
-          }
+          "builder": "@nx-go/nx-go:test"
         },
         "lint": {
           "builder": "@nx-go/nx-go:lint"
         }
       }
-    }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/workspace"
-  },
-  "schematics": {
-    "@nrwl/workspace": {
-      "library": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/cypress": {
-      "cypress-project": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/react": {
-      "application": {
-        "linter": "eslint"
-      },
-      "library": {
-        "linter": "eslint"
-      },
-      "storybook-configuration": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/next": {
-      "application": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/web": {
-      "application": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/node": {
-      "application": {
-        "linter": "eslint"
-      },
-      "library": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/nx-plugin": {
-      "plugin": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/nest": {
-      "application": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/express": {
-      "application": {
-        "linter": "eslint"
-      },
-      "library": {
-        "linter": "eslint"
-      }
-    }
-  }
+    }},
+  "cli": { "defaultCollection": "@nrwl/workspace" },
+  "schematics": {}
 }

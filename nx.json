@@ -1,9 +1,14 @@
 {
   "npmScope": "nx-go-playground",
-  "affected": { "defaultBase": "master" },
+  "affected": {
+    "defaultBase": "master"
+  },
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
     "tsconfig.base.json": "*",
     "nx.json": "*"
   },
@@ -12,11 +17,32 @@
       "runner": "@nrwl/nx-cloud",
       "options": {
         "accessToken": "YzVjM2JkY2QtYzY1Yy00YmYwLThmYmEtOTZmOWZhOGE1YmM0fHJlYWQtd3JpdGU=",
-        "cacheableOperations": ["build", "test", "lint", "e2e"],
+        "cacheableOperations": [
+          "build",
+          "test",
+          "lint",
+          "e2e"
+        ],
         "canTrackAnalytics": false,
         "showUsageWarnings": true
       }
     }
   },
-  "projects": { "api": { "tags": [] }, "api-core": { "tags": [] } }
+  "projects": {
+    "api": {
+      "tags": []
+    },
+    "api-core": {
+      "tags": []
+    },
+    "api-user": {
+      "tags": []
+    },
+    "api-post-data-access": {
+      "tags": []
+    },
+    "api-post-feature": {
+      "tags": []
+    }
+  }
 }

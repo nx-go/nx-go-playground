@@ -1,0 +1,32 @@
+datasource db {
+  //    provider = "postgresql"
+  //    url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url      = env("SQLITE_DB")
+}
+
+generator db {
+  provider = "go run github.com/prisma/prisma-client-go"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  username  String   @unique
+  email     String   @unique
+  admin     Boolean // sqlite does not support enums...
+  desc      String?
+  posts     Post[]   @relation(name: "User_hasMany_Post")
+}
+
+model Post {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title     String
+  published Boolean
+  desc      String?
+  author    User?    @relation("User_hasMany_Post", fields: [authorId], references: [id])
+  authorId  String?
+}

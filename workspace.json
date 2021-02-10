@@ -16,6 +16,7 @@
         "serve": {
           "builder": "@nx-go/nx-go:serve",
           "options": {
+            "cmd": "gow",
             "main": "apps/api/main.go"
           }
         },
@@ -31,6 +32,45 @@
       "projectType": "library",
       "root": "libs/api/core",
       "sourceRoot": "libs/api/core",
+      "architect": {
+        "test": {
+          "builder": "@nx-go/nx-go:test"
+        },
+        "lint": {
+          "builder": "@nx-go/nx-go:lint"
+        }
+      }
+    },
+    "api-user": {
+      "projectType": "library",
+      "root": "libs/api/user",
+      "sourceRoot": "libs/api/user",
+      "architect": {
+        "test": {
+          "builder": "@nx-go/nx-go:test"
+        },
+        "lint": {
+          "builder": "@nx-go/nx-go:lint"
+        }
+      }
+    },
+    "api-post-data-access": {
+      "projectType": "library",
+      "root": "libs/api/post/data-access",
+      "sourceRoot": "libs/api/post/data-access",
+      "architect": {
+        "test": {
+          "builder": "@nx-go/nx-go:test"
+        },
+        "lint": {
+          "builder": "@nx-go/nx-go:lint"
+        }
+      }
+    },
+    "api-post-feature": {
+      "projectType": "library",
+      "root": "libs/api/post/feature",
+      "sourceRoot": "libs/api/post/feature",
       "architect": {
         "test": {
           "builder": "@nx-go/nx-go:test"

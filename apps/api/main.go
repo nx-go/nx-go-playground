@@ -1,6 +1,7 @@
 package main
 
 import (
+	"api/libs/api/core"
 	"fmt"
 	"log"
 	"net/http"
@@ -38,6 +39,7 @@ func main() {
 	address := fmt.Sprintf("%s:%s", host, port)
 
 	http.HandleFunc("/", handler)
+	http.HandleFunc("/uptime", core.UptimeHandler)
 	fmt.Printf("Listening on port %s\n", address)
 	log.Fatal(http.ListenAndServe(address, nil))
 }

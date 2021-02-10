@@ -26,7 +26,23 @@
           "builder": "@nx-go/nx-go:lint"
         }
       }
-    }},
-  "cli": { "defaultCollection": "@nrwl/workspace" },
+    },
+    "api-core": {
+      "projectType": "library",
+      "root": "libs/api/core",
+      "sourceRoot": "libs/api/core",
+      "architect": {
+        "test": {
+          "builder": "@nx-go/nx-go:test"
+        },
+        "lint": {
+          "builder": "@nx-go/nx-go:lint"
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/workspace"
+  },
   "schematics": {}
 }

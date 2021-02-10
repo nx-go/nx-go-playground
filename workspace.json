@@ -30,7 +30,8 @@
           "builder": "@nx-go/nx-go:lint"
         }
       }
-    }},
+    }
+  },
   "cli": {
     "defaultCollection": "@nrwl/workspace"
   },

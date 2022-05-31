@@ -23,7 +23,7 @@ Run `nx g @nx-go/nx-go::lib` to generate a library.
 
 ## Development server
 
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+Run `nx serve my-app` for a dev server.
 
 ## Build
 

@@ -4,6 +4,7 @@
   "projects": {
     "api": "apps/api",
     "core": "libs/core",
-    "mapi": "apps/mapi"
+    "mapi": "apps/mapi",
+    "mcore": "libs/mcore"
   }
 }

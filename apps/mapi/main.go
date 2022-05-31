@@ -1,9 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"api/libs/mcore"
+	"fmt"
+)
 
 func Hello(name string) string {
-	result := "Hello " + name
+	result := "Hello " + mcore.Mcore(name)
 	return result
 }
 

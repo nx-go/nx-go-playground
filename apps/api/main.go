@@ -1,7 +1,7 @@
 package main
 
 import (
-	"api/libs/api/core"
+	"api/libs/core"
 	"fmt"
 	"log"
 	"net/http"

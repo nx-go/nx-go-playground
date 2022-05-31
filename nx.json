@@ -1,22 +1,36 @@
 {
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "npmScope": "nx-go-playground",
-  "affected": { "defaultBase": "master" },
+  "affected": {
+    "defaultBase": "main"
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/workspace"
+  },
   "implicitDependencies": {
-    "workspace.json": "*",
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
-    "tsconfig.base.json": "*",
-    "nx.json": "*"
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*",
+    "go.mod": "*"
   },
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "accessToken": "YzVjM2JkY2QtYzY1Yy00YmYwLThmYmEtOTZmOWZhOGE1YmM0fHJlYWQtd3JpdGU=",
-        "cacheableOperations": ["build", "test", "lint", "e2e"],
-        "canTrackAnalytics": false,
-        "showUsageWarnings": true
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "NjFiYTc3YjYtYWQ2My00MTQ1LThiZWItMjY1NTZkY2Y5MmVlfHJlYWQtd3JpdGU="
       }
     }
   },
-  "projects": { "api": { "tags": [] }, "api-core": { "tags": [] } }
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "plugins": ["@nx-go/nx-go"]
 }

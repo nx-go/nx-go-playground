@@ -1,22 +1,21 @@
 {
-  "npmScope": "nx-go-playground",
-  "affected": { "defaultBase": "master" },
-  "implicitDependencies": {
-    "workspace.json": "*",
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
-    "tsconfig.base.json": "*",
-    "nx.json": "*"
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "affected": {
+    "defaultBase": "main"
   },
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/nx-cloud",
-      "options": {
-        "accessToken": "YzVjM2JkY2QtYzY1Yy00YmYwLThmYmEtOTZmOWZhOGE1YmM0fHJlYWQtd3JpdGU=",
-        "cacheableOperations": ["build", "test", "lint", "e2e"],
-        "canTrackAnalytics": false,
-        "showUsageWarnings": true
-      }
-    }
+  "namedInputs": {
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
+    "production": [
+      "default"
+    ],
+    "sharedGlobals": [
+      "{workspaceRoot}/go.work"
+    ]
   },
-  "projects": { "api": { "tags": [] }, "api-core": { "tags": [] } }
+  "plugins": [
+    "@nx-go/nx-go"
+  ]
 }

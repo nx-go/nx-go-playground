@@ -1,0 +1,9 @@
+go 1.21
+
+use (
+	./apps/api
+	./apps/cli
+	./libs/geometry
+	./libs/logger
+	./libs/math
+)

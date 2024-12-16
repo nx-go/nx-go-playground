@@ -15,8 +15,9 @@
   },
   "private": true,
   "devDependencies": {
-    "@nx-go/nx-go": "3.2.0",
-    "@nx/workspace": "19.5.6",
-    "nx": "19.5.6"
-  }
+    "@nx-go/nx-go": "3.3.1",
+    "@nx/workspace": "20.2.2",
+    "nx": "20.2.2"
+  },
+  "packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c"
 }

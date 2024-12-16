@@ -4,18 +4,9 @@
     "defaultBase": "main"
   },
   "namedInputs": {
-    "default": [
-      "{projectRoot}/**/*",
-      "sharedGlobals"
-    ],
-    "production": [
-      "default"
-    ],
-    "sharedGlobals": [
-      "{workspaceRoot}/go.work"
-    ]
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "production": ["default"],
+    "sharedGlobals": ["{workspaceRoot}/go.work"]
   },
-  "plugins": [
-    "@nx-go/nx-go"
-  ]
+  "plugins": ["@nx-go/nx-go"]
 }

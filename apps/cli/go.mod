@@ -1,6 +1,6 @@
 module nx-go-playground/cli
 
-go 1.23
+go 1.25
 
 replace nx-go-playground/logger => ../../libs/logger
 replace nx-go-playground/math => ../../libs/math

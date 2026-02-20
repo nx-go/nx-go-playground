@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          cache: "pnpm"
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: 1.25.6
+          cache: false
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Derive appropriate SHAs for base and head for nx affected commands
+        id: set-shas
+        uses: nrwl/nx-set-shas@v4
+
+      - name: Format check
+        run: pnpm nx format:check
+
+      - name: Run affected lint
+        run: pnpm nx affected -t lint --parallel=3
+
+      - name: Run affected test
+        run: pnpm nx affected -t test --parallel=3
+
+      - name: Run affected build
+        run: pnpm nx affected -t build --parallel=3

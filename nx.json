@@ -6,7 +6,19 @@
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": ["default"],
-    "sharedGlobals": ["{workspaceRoot}/go.work"]
+    "sharedGlobals": []
   },
-  "plugins": ["@nx-go/nx-go"]
+  "plugins": [
+    {
+      "plugin": "@nx-go/nx-go",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "testTargetName": "test",
+        "lintTargetName": "lint",
+        "tidyTargetName": "tidy",
+        "generateTargetName": "generate"
+      }
+    }
+  ]
 }

@@ -4,15 +4,6 @@
   "projectType": "library",
   "sourceRoot": "libs/geometry",
   "tags": [],
-  "targets": {
-    "test": {
-      "executor": "@nx-go/nx-go:test"
-    },
-    "lint": {
-      "executor": "@nx-go/nx-go:lint"
-    },
-    "tidy": {
-      "executor": "@nx-go/nx-go:tidy"
-    }
-  }
+  "// targets": "to see all targets run: nx show project geometry --web",
+  "targets": {}
 }

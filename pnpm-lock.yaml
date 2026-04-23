@@ -8,8 +8,8 @@ importers:
   .:
     devDependencies:
       "@nx-go/nx-go":
-        specifier: 4.0.0-beta.0
-        version: 4.0.0-beta.0(nx@22.6.4)
+        specifier: 4.0.0
+        version: 4.0.0(nx@22.6.4)
       "@nx/workspace":
         specifier: 22.6.4
         version: 22.6.4
@@ -72,10 +72,10 @@ packages:
         integrity: sha512-9zESzOO5aDByvhIAsOy9TbpZ0Ur2AJbUI7UT73kcUTS2mxAMHOBaa1st/jAymNoCtvrit99kkzT1FZuXVcgfIQ==,
       }
 
-  "@nx-go/nx-go@4.0.0-beta.0":
+  "@nx-go/nx-go@4.0.0":
     resolution:
       {
-        integrity: sha512-eUmVjKWdc43c1q0xZxxhIL7byrAfahY3IDyNETphxlvegNCVHBFobbAoDratXIvOckWOvMKc32InIrSqJcVvqg==,
+        integrity: sha512-7/wbQ/DMhZenZoZGVKXJgOZbrr3cH0sfrbGFLnzjt2Kr+X5X6ng5mBMWmFHzTMIOHXM0qjXMhA24svQZZCisLw==,
       }
 
   "@nx/devkit@22.6.4":
@@ -1107,7 +1107,7 @@ snapshots:
       "@emnapi/runtime": 1.2.0
       "@tybys/wasm-util": 0.9.0
 
-  "@nx-go/nx-go@4.0.0-beta.0(nx@22.6.4)":
+  "@nx-go/nx-go@4.0.0(nx@22.6.4)":
     dependencies:
       "@nx/devkit": 22.6.4(nx@22.6.4)
       tslib: 2.6.2

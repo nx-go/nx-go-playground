@@ -15,7 +15,7 @@
   },
   "private": true,
   "devDependencies": {
-    "@nx-go/nx-go": "4.0.0-beta.0",
+    "@nx-go/nx-go": "4.0.0",
     "@nx/workspace": "22.6.4",
     "nx": "22.6.4",
     "prettier": "^3.8.1"

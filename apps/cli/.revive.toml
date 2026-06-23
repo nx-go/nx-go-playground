@@ -1,0 +1,132 @@
+# Revive configuration file
+# See https://github.com/mgechev/revive for documentation
+
+# Set to true to fail on warnings as well as errors
+severity = "warning"
+
+# Enable all default rules
+enableAllRules = false
+
+# Set the confidence for rules to allow passing. Default is 0.8
+confidence = 0.
+
+# Rules to enable
+[[rule]]
+name = "blank-imports"
+severity = "warning"
+
+[[rule]]
+name = "context-as-argument"
+severity = "warning"
+
+[[rule]]
+name = "context-keys-type"
+severity = "warning"
+
+[[rule]]
+name = "dot-imports"
+severity = "warning"
+
+[[rule]]
+name = "error-naming"
+severity = "warning"
+
+[[rule]]
+name = "error-return"
+severity = "warning"
+
+[[rule]]
+name = "error-strings"
+severity = "warning"
+
+[[rule]]
+name = "errorf"
+severity = "warning"
+
+[[rule]]
+name = "exported"
+severity = "warning"
+arguments = ["checkPrivateReceivers", "sayRepetitiveInsteadOfStutters"]
+
+[[rule]]
+name = "indent-error-flow"
+severity = "warning"
+
+[[rule]]
+name = "if-return"
+severity = "warning"
+
+[[rule]]
+name = "increment-decrement"
+severity = "warning"
+
+[[rule]]
+name = "package-comments"
+severity = "warning"
+
+[[rule]]
+name = "range"
+severity = "warning"
+
+[[rule]]
+name = "receiver-naming"
+severity = "warning"
+
+[[rule]]
+name = "redefines-builtin-id"
+severity = "warning"
+
+[[rule]]
+name = "string-format"
+severity = "warning"
+arguments = [
+  "core.WriteString",
+  "fmt.Printf",
+  "fmt.Sprintf",
+]
+
+[[rule]]
+name = "struct-tag"
+severity = "warning"
+
+[[rule]]
+name = "superfluous-else"
+severity = "warning"
+
+[[rule]]
+name = "time-naming"
+severity = "warning"
+
+[[rule]]
+name = "unexported-naming"
+severity = "warning"
+
+[[rule]]
+name = "unexported-return"
+severity = "warning"
+
+[[rule]]
+name = "unhandled-error"
+severity = "warning"
+arguments = ["fmt.Fprint", "fmt.Fprintf", "fmt.Fprintln"]
+
+[[rule]]
+name = "unnecessary-stmt"
+severity = "warning"
+
+[[rule]]
+name = "unreachable-code"
+severity = "warning"
+
+[[rule]]
+name = "var-declaration"
+severity = "warning"
+
+[[rule]]
+name = "var-naming"
+severity = "warning"
+arguments = ["ID"]
+
+[[rule]]
+name = "waitgroup-by-value"
+severity = "warning"

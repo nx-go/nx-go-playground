@@ -1,6 +1,6 @@
 module nx-go-playground/geometry
 
-go 1.25
+go 1.26
 
 replace nx-go-playground/math => ../math
 

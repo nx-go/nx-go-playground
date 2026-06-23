@@ -1,0 +1,4 @@
+allowBuilds:
+  nx: true
+minimumReleaseAgeExclude:
+  - "@nx-go/nx-go"

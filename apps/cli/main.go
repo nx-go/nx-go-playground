@@ -1,3 +1,4 @@
+// Package main provides the CLI application.
 package main
 
 import (

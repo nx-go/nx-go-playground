@@ -15,10 +15,10 @@
   },
   "private": true,
   "devDependencies": {
-    "@nx-go/nx-go": "4.1.1",
-    "@nx/workspace": "23.0.0",
-    "nx": "23.0.0",
-    "prettier": "^3.8.4"
+    "@nx-go/nx-go": "24.0.0",
+    "@nx/workspace": "24.0.5",
+    "nx": "24.0.5",
+    "prettier": "^3.9.10"
   },
-  "packageManager": "pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b"
+  "packageManager": "pnpm@12.18.0+sha512.9d7882d5dc82147ecfc4e062aa34834e0ad0296710a1837a1115ae012127d36b7109e321ac1598a1dd0a65597681b1e99917e12ed0d749eae91187943363beb3"
 }
